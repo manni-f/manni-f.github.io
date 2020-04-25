@@ -1,35 +1,61 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 	<head>
+		<title>Test Page</title>
 		<meta charset="utf-8">
-		<title></title>
+		<style>
+			li {
+				border: 1px solid black;
+			}
+			li a {
+				color: blue;
+			}
+			div a {
+			color: green;
+			}
+ /* "#" targets id's. "." targets classes */
+ 			#exec-bio {
+				background-color: lightgrey;
+			}
+			.bio-box {
+				border: 1px solid black;
+			}
+			.bio-box a {
+				color: green;
+			}
+			#bgorange {
+				background-color: orange;
+			}
+			.bgazure {
+				background-color: azure;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>I'm an h1</h1>
 	 <ul>
 		 <li>
-			 <a href="https://example.com/" style="color: red;">Link</a>
+			 <a href="https://example.com/">Link</a>
 		 </li>
 		 <li>
-			 <a href="https://example.com/" style="color: red;">Link</a>
+			 <a href="https://example.com/">Link</a>
 		 </li>
 		 <li>
-			 <a href="https://example.com/" style="color: red;">Link</a>
+			 <a href="https://example.com/">Link</a>
 		 </li>
 	 </ul>
 	 <h2>I'm an h2</h2>
-	 <div style="border: 1px solid black;">
-		 <a href="https://example.com/" style="color: green;">I'm a link</a>
+	 <div id="exec-bio" class="bio-box bgazure">
+		 <a href="https://example.com/">I'm a link</a>
 	 </div>
-	 <div style="border: 1px solid black;">
-		 <a href="https://example.com/" style="color: green;">I'm a link</a>
+	 <div id="bgorange" class="bio-box bgazure">
+		 <a href="https://example.com/">I'm a link</a>
 	 </div>
-	 <div style="border: 1px solid black;">
-		 <a href="https://example.com/" style="color: green;">I'm a link</a>
+	 <div class="bio-box bgazure">
+		 <a href="https://example.com/">I'm a link</a>
 	 </div>
-	 <div style="border: 1px solid black;">
-		 <a href="https://example.com/" style="color: green;">I'm a link</a>
+	 <div class="bio-box bgazure">
+		 <a href="https://example.com/">I'm a link</a>
 	 </div>
 	</body>
 </html>
