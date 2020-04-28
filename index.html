@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Test Pagec</title>
+    <title>Test Page</title>
     <meta charset="utf-8">
     <style>
 		/* global style rules */
       a {
-        color: red;
+        color: rgba(205, 0, 255, 0.2);
+      }
+      h2 {
+        font-size: 30px
       }
 
 			/* social style rules */
 			.tweet {
-				color: blue;
+        background-color: rgba(120, 120, 120, 0.2);
+        color: #02f;
 			}
 
 			/* bio module style rules */
+      .bio-wrap {
+
+      }
       .bio-box {
-        border: 1px solid black;
+        border: 2px solid #000;
+        width: 50%;
+        margin: 10%;
+        /* font-size: 150%; */
       }
 			.bio-text a {
-				color: green;
+				color: #0c3;
+        /* font-size: 150% */
 			}
 
     </style>
   </head>
   <body>
-    <h1 class="tweet">I'm an h1</h1>
-    <ul>
+    </div>
+    <h1>I'm an h1</h1>
+    <ul class="tweet">
       <li>
-        <a href="https://example.com/">Link</a>
+        <a href="https://example.com/" class="tweet">Link</a>
       </li>
       <li>
         <a href="https://example.com/">Link</a>
@@ -38,6 +50,8 @@
       </li>
     </ul>
     <h2>I'm an h2</h2>
+    <div class="bio-wrap">
+
     <div class="bio-box">
       <h3>Michael Hartl</h3>
       <a href="https://twitter.com/mhartl" class="tweet">@mhartl</a>
@@ -87,5 +101,6 @@
         The Future
       </p>
     </div>
+  </div>
   </body>
 </html>
