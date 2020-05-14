@@ -9,11 +9,24 @@
         font-size: 7vw;
         margin-top: 0;
       }
+			h2 + p {
+				font-size: 0.8em;
+				font-style: italic;
+				margin: 1em auto 0;
+				max-width: 70%;
+				text-align: center;
+			}
+						/* ~ instead of + changes ALL the "p"s instead of only the one following "h2". */
       /* Main Homepage Classes */
       .full-hero {
         background-color: #c7dbfc;
         height: 40vh;
+				position: relative;
       }
+			.full-hero:hover,
+			.full-hero:active {
+				background-color: #c7dbfc;
+			}
       .link {
         background-color: rgba(1, 1, 100, 0.2);
         border-radius: 0.5em;
@@ -22,27 +35,81 @@
         font-family: sans-serif;
         font-weight: bolder;
         height: 1.8em;
-        padding-top: 0.7em;
+				padding-top: 0.7em;
         text-align: center;
         text-decoration: none;
-        vertical-align: middle;
         width: 5em;
       }
 /* navigation style rules */
+			.header {
+				background-color: #000;
+				color: #fff;
+				width: 100%;
+				position: relative;
+			}
+
 			.header-nav {
 				float: right;
+				padding: 4vh 1.5vw 0 0;
 			}
 			.header-nav > li {
 				display: inline-block;
-				padding: 5.5vh 60px 0 0;
 				margin-left: 1em;
 			}
 			.header-nav a {
 				color: #000;
-				font-size: 0.8rem;
+				font-size: 0.95rem;
 				font-weight: bold;
 				text-decoration: none;
 				text-transform: uppercase;
+			}
+			.header-nav a:hover,
+			.header-nav a:active {
+				color: #ed6e2f;
+			}
+			/* .header-nav:last-child {
+				padding-right: 40px;
+			} */
+			.header-nav > li:first-child a {
+				color: white;
+			}
+			.header-nav > li:first-child a:hover {
+				color: #22ff66;
+			}
+			/* .header-nav > li:last-child a {
+				color: white;
+			} */
+			/* .header-nav > li:last-child a:hover {
+				color: green;
+			} */
+			.header-nav > li ~ li {
+			border-left: 2px solid rgba(255, 255, 255, 0.3);
+			padding-left: 1em;
+			}
+			.header-nav > li ~ li a {
+				color: white;
+			}
+			.header-nav > li ~ li a:hover {
+				color: #22ff66;
+			}
+			.header-logo {
+				background-color: black;
+				box-sizing: border-box;
+				display: block;
+				height: 10vh;
+				padding-top: 10px;
+				position: relative;
+				text-align: center;
+				width: 10vh;
+				opacity: 0.8;
+			}
+			.header-logo img {
+				width: 6vh;
+				border-radius: 2em;
+			}
+			.header-logo:hover,
+			.header-logo:active {
+				opacity: 1;
 			}
 /* social style rules */
 			.tweet {
@@ -59,13 +126,20 @@
         padding-top: 0.5em;
         width: 36px;
 			}
+			.tweet:hover,
+			.tweet:active {
+				color: #0af;
+				background-color: #33ff55;
+			}
       .show {
         display: block;
       }
       .social-list {
         list-style: none;
         padding: 0;
-        text-align: center;
+        bottom: 10%;
+				right: 5%;
+				position: absolute;
       }
       .social-list > li {
         display: inline-block;
