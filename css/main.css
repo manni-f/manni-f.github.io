@@ -1,4 +1,8 @@
 /* global style classes */
+			html {
+				box-shadow: 0 0 0 15px black inset;
+				padding: 0 10px;
+			}
 			body {
 				font-family: helvetica, arial, sans-serif;
 			}
@@ -9,23 +13,64 @@
         font-size: 7vw;
         margin-top: 0;
       }
-			h2 + p {
+			h2 {
+				font-size: 2em;
+			}
+			h2 ~ p {
 				font-size: 0.8em;
 				font-style: italic;
 				margin: 1em auto 0;
 				max-width: 70%;
 				text-align: center;
 			}
+			p {
+				line-height: 1.7;
+			}
 						/* ~ instead of + changes ALL the "p"s instead of only the one following "h2". */
-      /* Main Homepage Classes */
+/* Main Homepage Classes */
       .full-hero {
         background-color: #c7dbfc;
-        height: 40vh;
-				position: relative;
+				background-size: cover;
+				box-sizing: border-box;
+        height: 100vh;
+				padding-top: 10vh;
       }
-			.full-hero:hover,
-			.full-hero:active {
-				background-color: #c7dbfc;
+			.full-hero:after {
+				bottom: 2vh;
+				color: #fff;
+				content:"﹀";
+				font-size: 36px;
+				left: 50%;
+				position: absolute;
+				transform: translate(-50%, 0);
+			}
+			.hero-image {
+				background-image: url(/images/cover.jpg);
+				background-position: center top;
+			}
+			.hero-content {
+				color: white;
+				position: relative;
+				text-align: center;
+				text-transform: uppercase;
+				top: 50%;
+				transform: translate(0, -50%);
+			}
+			.hero-content h1 {
+				color: rgba(255, 255, 255, 0.8);
+				font-size: 7vw;
+				margin-bottom: 0.25em;
+				/* top: 10%; */
+				transform: translate(0, -290%);
+			}
+			.hero-content .link {
+				background-color: rgba(255, 255, 255, 0.8);
+				color: #557c83;
+				transform: translate(-230%, 250%);
+			}
+			.hero-content .link:hover {
+				background-color: #557c83;
+				color: white;
 			}
       .link {
         background-color: rgba(1, 1, 100, 0.2);
@@ -35,17 +80,19 @@
         font-family: sans-serif;
         font-weight: bolder;
         height: 1.8em;
-				padding-top: 0.7em;
+				padding: 0.7em 0.7em 0 0.7em;
         text-align: center;
         text-decoration: none;
-        width: 5em;
+        width: 5.5em;
       }
 /* navigation style rules */
 			.header {
-				background-color: #000;
 				color: #fff;
+				left: -8px;
+				position: fixed;
 				width: 100%;
-				position: relative;
+				z-index: 20;
+				background-color: #000;
 			}
 
 			.header-nav {
@@ -58,13 +105,16 @@
 			}
 			.header-nav a {
 				color: #000;
+
+			}
+			.nav-links a {
 				font-size: 0.95rem;
 				font-weight: bold;
 				text-decoration: none;
 				text-transform: uppercase;
 			}
-			.header-nav a:hover,
-			.header-nav a:active {
+			.nav-links a:hover,
+			.nav-links a:active {
 				color: #ed6e2f;
 			}
 			/* .header-nav:last-child {
@@ -103,14 +153,38 @@
 				width: 10vh;
 				opacity: 0.8;
 			}
-			.header-logo img {
-				width: 6vh;
-				border-radius: 2em;
-			}
 			.header-logo:hover,
 			.header-logo:active {
 				opacity: 1;
 			}
+			.header-logo img {
+				width: 6vh;
+				border-radius: 2em;
+			}
+/* Paragraph style rules */
+			.home-section {
+				margin: 6rem auto;
+				max-width: 980px;
+				width: 90vw;
+			}
+			.home-section h2 {
+				margin-bottom: 1.5rem;
+				text-align: center;
+			}
+			.home-callout {
+				background-color: #000;
+				color: #fff;
+				padding: 7vh 0;
+			}
+			.callout-title {
+				font-size: 5.75vw;
+				text-align: right;
+				text-transform: uppercase;
+			}
+			.callout-text {
+				font-size: 1rem;
+			}
+
 /* social style rules */
 			.tweet {
         background-color: rgba(20, 60, 125, 0.2);
@@ -147,32 +221,29 @@
       }
 /* bio module style rules */
       .bio-box {
-        border: 1px solid #000;
         box-sizing: border-box;
-        border-color: transparent black black transparent;
         float: left;
         font-size: 1rem;
-        margin: 40px 1% 0;
-        padding: 2%;
-        width: 23%;
+        margin: 6rem 0 0;
+        padding: 0 3%;
+        width: 33%;
       }
       .bio-wrapper {
         background-color: #efefef;
         font-size: 24px;
-        margin: auto;
+        margin: 10px;
         max-width: 960px;
-        min-height: 400px;
-        overflow: scroll;
+        overflow: hidden;
       }
       .bio-box h3 {
         color: #fff;
         font-size: 1.25em;
         margin: -40px 0 1em;
         text-align: center;
+				text-transform: uppercase;
       }
       .bio-text {
-        font-size: 1em;
-        line-height: 1.5;
+        font-size: 0.75em;
       }
 			.bio-text a {
 				color: #0c3;
@@ -187,7 +258,7 @@
       }
 			.bio-box .tweet {
 				display: block;
-				margin: 2em 0 1em;
+				margin: 2em auto 1em;
 			}
 /* box style rules */
       .test-box {
@@ -204,3 +275,27 @@
         width: auto;
         margin-top: 100px;
       }
+/* Footer Style rules */
+			.footer {
+				background-color: #000;
+				padding: 10vh 0 12vh;
+				text-align: center;
+			}
+			.footer-logo img {
+				width: 120px;
+			}
+			.footer h3 {
+				color: #fff;
+				padding-top: 1.25em;
+				text-transform: uppercase;
+			}
+			.footer h3 span {
+				color: #aaa
+			}
+			.footer-nav li {
+				display: inline-block;
+				margin: 2em 1em 0;
+			}
+			.footer-nav a {
+				color: #cce;
+			}
