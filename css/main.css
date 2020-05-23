@@ -4,7 +4,10 @@
 				padding: 0 10px;
 			}
 			body {
+				display: flex;
+				flex-direction: column;
 				font-family: helvetica, arial, sans-serif;
+				min-height: 100vh;
 			}
 			a {
         color: rgba(255, 0, 255, 1);
@@ -25,14 +28,20 @@
 			}
 			p {
 				line-height: 1.7;
+				margin: 0.75em 0;
 			}
 						/* ~ instead of + changes ALL the "p"s instead of only the one following "h2". */
-/* Main Homepage Classes */
+			.content-container {
+				flex-grow: 1;
+				padding-top: 10vh;
+				width: 100%;
+			}
+/* Main Homepage style rules */
       .full-hero {
         background-color: #c7dbfc;
 				background-size: cover;
 				box-sizing: border-box;
-        height: 100vh;
+        height: 90vh;
 				padding-top: 10vh;
       }
 			.full-hero:after {
@@ -172,17 +181,28 @@
 				text-align: center;
 			}
 			.home-callout {
+				align-items: center;
 				background-color: #000;
 				color: #fff;
+				display: flex;
 				padding: 7vh 0;
 			}
+			.home-callout h3 {
+				color: inherit;
+				margin-top: 1em;
+			}
 			.callout-title {
+				flex-grow: 1;
+				flex-basis: 0;
 				font-size: 5.75vw;
 				text-align: right;
 				text-transform: uppercase;
 			}
 			.callout-text {
+				flex-basis: 40em;
+				flex-shrink: 0;
 				font-size: 1rem;
+				padding: 0 3vw;
 			}
 
 /* social style rules */
