@@ -1,6 +1,6 @@
 ---
 layout: post
-title: This is the title of the first post
+title: This is the title of the second post
 postHero: /images/cover.jpg
 author: Mr E Filson
 authorTwitter: https://twitter.com/mannifilson
@@ -8,8 +8,8 @@ gravatar: /images/efpic.jpg
 postFooter: Additional information, and maybe a <a href="#">link or two</a>
 ---
 
-Call me *Ishmael*. Some years ago– never mind how long
-precisely–having little or no money in my purse, and nothing
+Call me *Ishmael*. Some years ago–*never mind how long
+precisely*–having little or no money in my purse, and nothing
 particular to interest me on shore, I thought I would sail about a little
 and see the watery part of the world. It is a way I have of driving off
 the spleen and regulating the circulation.
