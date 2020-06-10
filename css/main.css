@@ -45,7 +45,6 @@
 /* navigation style rules */
 			.header {
 				color: #fff;
-				left: -8px;
 				position: fixed;
 				width: 100%;
 				z-index: 20;
@@ -175,7 +174,6 @@
 				position: relative;
 				text-align: center;
 				text-transform: uppercase;
-				top: 50%;
 				transform: translate(0, -50%);
 			}
 			.hero-content h1 {
@@ -503,3 +501,101 @@
 				margin-top: 3em;
 				padding-top: 2em;
 			}
+
+
+/* Responsive Style Rules */
+
+		@media (max-width: 800px) {
+				html {
+					box-shadow: none;
+					padding: 0;
+				}
+				.half-hero {
+					display: none;
+				}
+				/* Navigation */
+				.header-nav {
+					padding: 2vh 1em 0 0;
+				}
+				.header-nav > li {
+					margin-left: 0.25em;
+				}
+				.header-nav > li ~ li {
+					padding-left: 0.25em;
+				}
+				.nav-links a {
+					font-size: 3.25vw;
+				}
+				.header-logo {
+					left: auto;
+				}
+
+				/* Main */
+				.hero-content {
+					color: white;
+					position: relative;
+					text-align: center;
+					text-transform: uppercase;
+					transform: translate(50%, 300%);
+				}
+				.hero-content h1 {
+					color: rgba(255, 255, 255, 0.8);
+					font-size: 7vw;
+					margin-bottom: 0.25em;
+					transform: translate(-50%, -180%);
+				}
+				.hero-content .link {
+					background-color: rgba(255, 255, 255, 0.8);
+					color: #557c83;
+					transform: translate(-230%, 250%);
+				}
+				.hero-content .link:hover {
+					background-color: #557c83;
+					color: white;
+				}
+				.home-callout {
+					flex-direction: column;
+				}
+				.callout-text {
+					flex: 1;
+				}
+				.bio-box {
+					float: none;
+					font-size: 1.3rem;
+					width: auto;
+				}
+				/* Blogs */
+				.post-aside {
+					display: none;
+				}
+				.blog-recent {
+					display: none;
+				}
+				.blog-previews {
+					padding: 0;
+				}
+				/* Gallery */
+				.gallery {
+					flex-direction: column;
+				}
+				.gallery .col {
+					padding: 1em;
+				}
+				.gallery .gallery-thumbs {
+					flex: 1;
+					height: auto;
+					white-space: nowrap;
+					width: 100vw;
+				}
+				.gallery-thumbs > div {
+					display: inline-block;
+				}
+				.gallery-thumbs img {
+					height: 7vh;
+					margin: 0 10px 0 0;
+					width: auto;
+				}
+				.gallery .gallery-info {
+					flex: 1;
+				}
+		}
