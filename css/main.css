@@ -58,11 +58,12 @@
 				display: inline-block;
 				margin-left: 1em;
 			}
-			.header-nav a {
+			.header-nav a,
+			.drop-trigger {
 				color: #000;
-
 			}
-			.nav-links a {
+			.nav-links a,
+			.drop-trigger {
 				font-size: 0.95rem;
 				font-weight: bold;
 				text-decoration: none;
@@ -116,6 +117,80 @@
 				width: 6vh;
 				border-radius: 2em;
 			}
+			/* Dropdown Menu */
+			.dropdown {
+				position: relative;
+			}
+			.dropdown:hover .drop-menu {
+				display: block;
+			}
+			.dropdown:hover .drop-trigger {
+				border-color: #ed6e2f transparent transparent;
+			}
+			.drop-trigger {
+				display: inline-block;
+				padding-right: 1.5em;
+				position: relative;
+			}
+			.drop-trigger:after {
+				border: 0.3em solid;
+				border-color: #aaa transparent transparent;
+				content: "";
+				height: 0;
+				position: absolute;
+				right: 0;
+				top: 0.3em;
+				width: 0;
+			}
+			.drop-menu {
+				box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+				display: none;
+				list-style: none;
+				padding: 1em 0 0;
+				position: absolute;
+				right: 0;
+				z-index: 9;
+			}
+			.drop-menu:before {
+				border: 0.6em solid;
+				border-color: transparent transparent #333;
+				content: "";
+				height: 0;
+				position: absolute;
+				right: 1em;
+				top: -0.1em;
+				width: 0;
+			}
+			.drop-menu li {
+				background-color: #333;
+			}
+			.drop-menu li ~ li {
+				border-top: 1px dotted rgba(0, 0, 0, 0.1);
+			}
+			.drop-menu li:first-child {
+				border-radius: 5px 5px 0 0;
+				color: #999;
+				font-size: 0.5em;
+				padding: 1em 1em 0.25em;
+				text-align: right;
+				text-transform: uppercase;
+			}
+			.drop-menu li:last-child {
+				border-radius: 0 0 5px 5px;
+			}
+			.drop-menu a {
+				color: #333;
+				display: block;
+				font-weight: normal;
+				padding: 0.5em 2em 0.5em 1em;
+				text-align: left;
+				text-transform: none;
+				white-space: nowrap;
+			}
+			.drop-menu a:hover {
+				background-color: rgba(0, 0, 0, 0.1);
+				color: #333;
+			}
 /* Footer Style rules */
 			.footer {
 				background-color: #000;
@@ -140,6 +215,13 @@
 			.footer-nav a {
 				color: #cce;
 			}
+			.footer .dropdown:hover .drop-menu,
+			.footer .drop-trigger:after {
+				display:none;
+			}
+			.footer .drop-trigger {
+				padding-right: 0;
+			}
 /* Main Homepage style rules */
 			 .full-hero {
 			  background-color: #c7dbfc;
@@ -150,9 +232,9 @@
     	}
 			.full-hero:after {
 				bottom: 2vh;
-				color: #fff;
-				content:"﹀";
-				font-size: 36px;
+				border: 0.6em solid;
+				border-color: #fff transparent transparent;
+				content: "";
 				left: 50%;
 				position: absolute;
 				transform: translate(-50%, 0);
