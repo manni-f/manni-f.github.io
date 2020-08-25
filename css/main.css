@@ -265,7 +265,7 @@
 				left: 4px;
 			}
 			.hero-image {
-				background-image: url(/images/cover.jpg);
+				background-image: url(/images/bwcover.jpg);
 				background-position: center top;
 			}
 			.hero-content {
@@ -623,6 +623,7 @@
 				}
 				.half-hero {
 					display: none;
+					margin-top: 50px;
 				}
 				/* Mobile Navigation */
 				.header {
@@ -728,7 +729,7 @@
 					top: 150px; */
 				}
 				.full-hero {
-					margin-top: -50%;
+					margin-top: -20%;
 				}
 				.full-hero:after {
 					bottom: 30vh;
@@ -737,8 +738,8 @@
 					box-sizing: content-box;
 					display: inline-block;
 					position: relative;
-					left: 150px;
-					top: 250px;
+					left: 180px;
+					top: 180px;
 				}
 				.social-list > li {
 					display: inline-block;
