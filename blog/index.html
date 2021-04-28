@@ -1,0 +1,38 @@
+---
+layout: default
+title: Blog Post
+description: An interesting story...
+---
+
+<div class="page blog-index">
+  <h1>Blog Page</h1>
+
+  <div class="col-two blog-cols">
+
+    <div class="col col-side blog-recent">
+      {% include recentlist.html %}
+    </div>
+
+    <div class="col col-content blog-previews">
+
+    {% for post in site.posts %}
+      <div class="blog-posts">
+        <header class="post-header">
+          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          <div class="post-byline">
+            <img src="{{ post.gravatar }}" />
+            <a href="{{ post.authorTwitter }} " class="tweet">@</a>
+            by: {{ post.author }}
+
+            <span> - {{ post.date | date: '%d %B, %Y' }} </span>
+          </div>
+        </header>
+      <div class="posts-image" style="background-image:url({{ post.postHero }})">
+      </div>
+      {{ post.excerpt }}
+      <a href="{{ post.url }}">Read more...</a>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</div>
