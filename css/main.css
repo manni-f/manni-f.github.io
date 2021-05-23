@@ -253,11 +253,14 @@
 			.full-hero:after {
 				bottom: 2vh;
 				border: 0.6em solid;
-				border-color: #fff transparent transparent;
-				content: "";
+				border-color: grey transparent transparent;
+				content: url("./index.html#content");
 				left: 50%;
 				position: absolute;
 				transform: translate(-50%, 0);
+			}
+			.full-hero:after:hover {
+				color: white;
 			}
 			.half-hero {
 				background-position: center;
@@ -496,10 +499,10 @@
 			.gallery-thumbs img:hover {
 				opacity: 1;
 			}
-			.gallery-thumbs .current img {
+			/* .gallery-thumbs .current img {
 				box-shadow: 0 0 0 5px #ed6e2f;
 				opacity: 1;
-			}
+			} */
 /* BLOGS Page style rules */
 			.page {
 				margin: 10vh auto 15vh;
