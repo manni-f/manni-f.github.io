@@ -39,12 +39,10 @@ description: An interesting story...
     </div>
 
   </div>
-  <h2>Submit Blog Post</h2>
-  <br>
   <form action="blogPost.php" method="get">
     Name:
     <input type="text" name="name" value="<?php echo $name;?>">
-    <span class="error">* <?php echo nameErr; ?> </span>
+    <span class="error">* <?php echo nameErr; ?></span>
     <br>
     <br>
     Email:
@@ -52,9 +50,9 @@ description: An interesting story...
     <span class="error">* <?php echo emailErr; ?></span>
     <br>
     <br>
-    <textarea name="text" rows="8" cols="80"> <?php echo $text;?> </textarea>
+    <textarea name="text" rows="8" cols="80"><?php echo $text;?></textarea>
     <br>
-    <input type="submit" name="form" value="Submit">
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?></form>
+    <input type="submit">
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"></form>
   </form>
 </div>
